@@ -30,7 +30,7 @@ python/ ディレクトリに次の**.envファイル**を作成します
 
 ```
 # grpc settings
-API_KEY=<your_key>;
+API_KEY=<your_key>
 API_ENDPOINT=api-grpc-2.yysystem2021.com
 API_PORT=443
 
