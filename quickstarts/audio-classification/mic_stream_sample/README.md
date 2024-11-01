@@ -9,22 +9,22 @@ Python 3.10.6をインストールしてください
 **protoファイルの設定**
 
 \[[<u>開発者コンソール</u>](https://api-web.yysystem2021.com)\]から最新の
-**yysystem.proto** ファイルをダウンロードして、**pyshon/protos/**
+**yysystem.audioclassification.proto** ファイルをダウンロードして、**protos/**
 ディレクトリに配置します。
 
 **フォルダの構造**
 
 ```
-python/ # ソリューションフォルダ
+./ # ソリューションフォルダ
   protos/
-    yysystem.proto # ここに配置する
+    yysystem.audioclassification.proto # ここに配置する
     …
   …
 ```
 
 **.envファイルの作成**
 
-python/ ディレクトリに次の**.envファイル**を作成します
+quickstarts/audio-classification/mic_stream_sample ディレクトリに次の**.envファイル**を作成します
 
 **.env**
 
@@ -35,16 +35,14 @@ API_ENDPOINT=api-grpc-2.yysystem2021.com
 API_PORT=443
 
 # streamingConfig
-MODEL=10
-ENCODING=LINEAR16
-LANGUAGE_CODE=4
 SAMPLE_RATE_HERTZ=16000
-ENABLE_INTERIM_RESULTS=true
-AUDIO_CHANNEL_COUNT=1
+ENDPOINT_ID=<your_endpont_id>
 ```
 
-**YOUR_API_KEY** の値を開発者コンソールで発行した Speech-to-Text の API
+**your_key** の値を開発者コンソールで発行した Speech-to-Text の API
 キーに置き換えます。
+
+**your_endpoint_id** の値を開発者コンソールでトレーニング、デプロイしたデプロイIDに置き換えます。
 
 ## ビルドと実行
 
