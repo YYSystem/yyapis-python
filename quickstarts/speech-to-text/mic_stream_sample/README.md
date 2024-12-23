@@ -2,20 +2,21 @@
 
 Python サンプル コンソールアプリ
 
-## 準備
+## 事前準備
 
-Python 3.10.6をインストールしてください
+- [git](https://git-scm.com/downloads) - ソースコード管理システム
+- [Miniconda](https://docs.anaconda.com/miniconda/) (Python 3.12.2) - パッケージ管理ツール conda と Python 基本パッケージを内包するディストリビューション
+- [<u>開発者コンソール</u>](https://api-web.yysystem2021.com) の `yysystem.proto` のダウンロード、`API キー` の取得
 
 **protoファイルの設定**
 
-\[[<u>開発者コンソール</u>](https://api-web.yysystem2021.com)\]から最新の
-**yysystem.proto** ファイルをダウンロードして、**pyshon/protos/**
+**yysystem.proto** ファイルを **mic_stream_sample/protos/**
 ディレクトリに配置します。
 
 **フォルダの構造**
 
 ```
-python/ # ソリューションフォルダ
+mic_stream_sample/ # ソリューションフォルダ
   protos/
     yysystem.proto # ここに配置する
     …
