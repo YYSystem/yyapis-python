@@ -1,9 +1,9 @@
-cffi==1.16.0
-grpcio==1.62.1
-grpcio-tools==1.62.1
-numpy==1.26.4
-protobuf==4.25.3
+cffi==1.17.1
+grpcio==1.69.0
+grpcio-tools==1.69.0
+numpy==2.2.2
+protobuf==5.29.3
 pycparser==2.22
 python-dotenv==1.0.1
-six==1.16.0
-sounddevice==0.4.6
+six==1.17.0
+sounddevice==0.5.1

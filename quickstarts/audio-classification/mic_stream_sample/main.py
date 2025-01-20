@@ -4,8 +4,8 @@ from os.path import join, dirname
 from dotenv import load_dotenv
 import grpc
 
-import protos.yysystem.audioclassification_pb2 as audioclassification_pb2
-import protos.yysystem.audioclassification_pb2_grpc as audioclassification_pb2_grpc
+import protos.audioclassification_pb2 as audioclassification_pb2
+import protos.audioclassification_pb2_grpc as audioclassification_pb2_grpc
 
 from microphone import MicStreamInput
 

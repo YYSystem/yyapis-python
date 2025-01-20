@@ -161,3 +161,6 @@ cython_debug/
 
 # YYAPIs proto file
 protos/
+
+# __pychache__ directory
+__pychache__/
