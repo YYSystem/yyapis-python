@@ -60,21 +60,21 @@ AUDIO_CHANNEL_COUNT=1
 
 YOUR API KEY と YOUR ENDPOINT ID に、開発者コンソールから取得した値を貼り付けてください。
 
-## [任意] Rye のインストール
+## [任意] uv のインストール
 
-1. curl コマンドを実行して Rye をインストールします。
-
-```bash
-curl -sSf https://rye.astral.sh/get | bash
-```
-
-2. Rye のパスを通します。
+1. curl コマンドを実行して uv をインストールします。
 
 ```bash
-echo 'source "$HOME/.rye/env"' >> ~/.profile
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-## [任意] Rye で仮想環境を構築する
+2. shellを再起動して、バージョンを確認します。
+
+```bash
+uv --version
+```
+
+## [任意] uv で仮想環境を構築する
 
 1. プロジェクトのディレクトリまで移動します。
 
@@ -83,31 +83,30 @@ cd
 cd yyapis-python/quickstarts/audio-classification
 ```
 
-2. プロジェクトのディレクトリで Rye での仮想環境を立ち上げます。
+2. プロジェクトのディレクトリで uv での仮想環境を立ち上げます。
 
 ```bash
-rye init
+uv init
 ```
 
 3. python のバージョンを指定してインストールします。
 
 ```bash
-rye pin 3.13
-rye sync
+uv python pin 3.13
+uv sync
 ```
 
 4. 仮想環境をアクティベートします。
 
 ```bash
-source .venv/bin/activate
+. .venv/bin/activate
 ```
 
 5. ライブラリをインストールします。
 
 ```bash
 cd mic_stream_sample
-rye add $(cat requirements.txt)
-rye sync
+uv add -r requirements.txt
 ```
 
 [他の仮想環境や Python と pip のみインストールした場合]
@@ -118,6 +117,6 @@ pip install -r requirements.txt
 ## サンプルアプリの実行
 
 ```bash
-python codegen.py
-python main.py
+uv run codegen.py
+uv run main.py
 ```
