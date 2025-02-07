@@ -29,7 +29,7 @@ mkdir protos
 4. YYAPIs 開発者コンソールから音響分類 API の proto ファイル(`audioclassification.proto`)をダウンロードして、 `protos` ディレクトリを配置します。
 
 ```bash
-yyapis-node/quickstarts/speech-to-text/mic-stream-sample/protos/audioclassfication.proto # ← ここに配置する
+yyapis-node/quickstarts/audio-classification/mic-stream-sample/protos/audioclassfication.proto # ← ここに配置する
 ```
 
 ## API キー　の設定
