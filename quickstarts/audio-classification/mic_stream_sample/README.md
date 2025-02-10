@@ -2,10 +2,10 @@
 
 ## 事前準備
 
-- [git] (https://git-scm.com/downloads) - ソースコード管理システム
+- [<u>git</u>](https://git-scm.com/downloads) - ソースコード管理システム
 - [<u>開発者コンソール</u>](https://api-web.yysystem2021.com) の `audioclassification.proto`、 `API キー`、`エンドポイントID`
-- [サンプルデータのデプロイ] (https://github.com/YYSystem/yyapis-docs/wiki/ClassifyStream) - サンプルデータのデプロイまで終わらせてください。
-- [python] (https://www.python.org/downloads/) (推奨バージョン 3.13.1) - 自身の好みの仮想環境を使いたい方や python だけインストールしたい方は python と pip が使えるようにしてください。
+- [<u>サンプルデータのデプロイ</u>] (https://github.com/YYSystem/yyapis-docs/wiki/ClassifyStream) - サンプルデータのデプロイまで終わらせてください。
+- [<u>python</u>] (https://www.python.org/downloads/) (推奨バージョン 3.13.1) - 自身の好みの仮想環境を使いたい方や python だけインストールしたい方は python と pip が使えるようにしてください。
 
 ## サンプルコードのダウンロード
 
@@ -29,7 +29,7 @@ mkdir protos
 4. YYAPIs 開発者コンソールから音響分類 API の proto ファイル(`audioclassification.proto`)をダウンロードして、 `protos` ディレクトリを配置します。
 
 ```bash
-yyapis-node/quickstarts/audio-classification/mic-stream-sample/protos/audioclassfication.proto # ← ここに配置する
+yyapis-python/quickstarts/audio-classification/mic-stream-sample/protos/audioclassfication.proto # ← ここに配置する
 ```
 
 ## API キー　の設定
@@ -87,6 +87,7 @@ cd yyapis-python/quickstarts/audio-classification
 
 ```bash
 uv init
+uv sync
 ```
 
 3. python のバージョンを指定してインストールします。
@@ -107,6 +108,7 @@ uv sync
 ```bash
 cd mic_stream_sample
 uv add -r requirements.txt
+uv sync
 ```
 
 [他の仮想環境や Python と pip のみインストールした場合]

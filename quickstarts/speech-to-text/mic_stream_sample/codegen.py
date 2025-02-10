@@ -5,8 +5,8 @@ protoc.main(
     (
         "",
         "-I.",
-        "--python_out=.",
-        "--grpc_python_out=.",
+        "--python_out=./",
+        "--grpc_python_out=./",
         "./protos/yysystem.proto",
     )
 )
