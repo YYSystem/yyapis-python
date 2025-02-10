@@ -1,40 +1,51 @@
-# YYAPIs Speech-to-Text
-
-Python サンプル コンソールアプリ
+# YYAPIs speech-to-text Python サンプル コンソールアプリ
 
 ## 事前準備
 
-- [git](https://git-scm.com/downloads) - ソースコード管理システム
-- [Miniconda](https://docs.anaconda.com/miniconda/) (Python 3.12.2) - パッケージ管理ツール conda と Python 基本パッケージを内包するディストリビューション
-- [<u>開発者コンソール</u>](https://api-web.yysystem2021.com) の `yysystem.proto` のダウンロード、`API キー` の取得
+- [<u>git</u>](https://git-scm.com/downloads) - ソースコード管理システム
+- [<u>開発者コンソール</u>](https://api-web.yysystem2021.com) の `yysystem.proto`、 `API キー`
+- [<u>python</u>](https://www.python.org/downloads/) (推奨バージョン 3.13.1) - 自身の好みの仮想環境を使いたい方や python だけインストールしたい方は python と pip が使えるようにしてください。
 
-**protoファイルの設定**
+## サンプルコードのダウンロード
 
-**yysystem.proto** ファイルを **mic_stream_sample/protos/**
-ディレクトリに配置します。
+1. git を使用して、任意のディレクトリにサンプルコードをダウンロードします。
 
-**フォルダの構造**
-
-```
-mic_stream_sample/ # ソリューションフォルダ
-  protos/
-    yysystem.proto # ここに配置する
-    …
-  …
+```bash
+git clone https://github.com/YYSystem/yyapis-python.git
 ```
 
-**.envファイルの作成**
+2. clone したプロジェクトのディレクトリを移動します。
 
-python/ ディレクトリに次の**.envファイル**を作成します
-
-**.env**
-
+```bash
+cd yyapis-python/quickstarts/speech-to-text/mic_stream_sample
 ```
+
+3. `mic-stream-sample` の直下に `protos` を作成します。
+```bash
+mkdir protos
+```
+
+4. YYAPIs 開発者コンソールから音響分類 API の proto ファイル(`yysystem.proto`)をダウンロードして、 `protos` ディレクトリを配置します。
+
+```bash
+yyapis-python/quickstarts/speech-to-text/mic-stream-sample/protos/yysystem.proto # ← ここに配置する
+```
+
+## API キー　の設定
+
+1. mic-stream-sample の直下に .envファイルを作成します。
+
+```bash
+touch .env
+```
+
+2. 以下のソースコードをコピーして .env ファイルに貼り付けます。
+
+```.env
 # grpc settings
-API_KEY=<your_key>
+API_KEY=YOUR API KEY
 API_ENDPOINT=api-grpc-2.yysystem2021.com
 API_PORT=443
-
 # streamingConfig
 MODEL=10
 ENCODING=LINEAR16
@@ -44,15 +55,67 @@ ENABLE_INTERIM_RESULTS=true
 AUDIO_CHANNEL_COUNT=1
 ```
 
-**YOUR_API_KEY** の値を開発者コンソールで発行した Speech-to-Text の API
-キーに置き換えます。
+YOUR API KEY に、開発者コンソールから取得した値を貼り付けてください。
 
-## ビルドと実行
+## [任意] uv のインストール
 
-**bash**
+1. curl コマンドを実行して uv をインストールします。
 
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
-$ pip install -r requirements.txt
-$ python codegen.py
-$ python main.py
+
+2. shellを再起動して、バージョンを確認します。
+
+```bash
+uv --version
+```
+
+## [任意] uv で仮想環境を構築する
+
+1. プロジェクトのディレクトリまで移動します。
+
+```bash
+cd
+cd yyapis-python/quickstarts/speech-to-text
+```
+
+2. プロジェクトのディレクトリで uv での仮想環境を立ち上げます。
+
+```bash
+uv init
+uv sync
+```
+
+3. python のバージョンを指定してインストールします。
+
+```bash
+uv python pin 3.13
+uv sync
+```
+
+4. 仮想環境をアクティベートします。
+
+```bash
+. .venv/bin/activate
+```
+
+5. ライブラリをインストールします。
+
+```bash
+cd mic_stream_sample
+uv add -r requirements.txt
+uv sync
+```
+
+[他の仮想環境や Python と pip のみインストールした場合]
+```bash
+pip install -r requirements.txt
+```
+
+## サンプルアプリの実行
+
+```bash
+uv run codegen.py
+uv run main.py
 ```
