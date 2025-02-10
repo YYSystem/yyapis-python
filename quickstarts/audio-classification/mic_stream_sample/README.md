@@ -4,8 +4,8 @@
 
 - [<u>git</u>](https://git-scm.com/downloads) - ソースコード管理システム
 - [<u>開発者コンソール</u>](https://api-web.yysystem2021.com) の `audioclassification.proto`、 `API キー`、`エンドポイントID`
-- [<u>サンプルデータのデプロイ</u>] (https://github.com/YYSystem/yyapis-docs/wiki/ClassifyStream) - サンプルデータのデプロイまで終わらせてください。
-- [<u>python</u>] (https://www.python.org/downloads/) (推奨バージョン 3.13.1) - 自身の好みの仮想環境を使いたい方や python だけインストールしたい方は python と pip が使えるようにしてください。
+- [<u>サンプルデータのデプロイ</u>](https://github.com/YYSystem/yyapis-docs/wiki/ClassifyStream) - サンプルデータのデプロイまで終わらせてください。
+- [<u>python</u>](https://www.python.org/downloads/) (推奨バージョン 3.13.1) - 自身の好みの仮想環境を使いたい方や python だけインストールしたい方は python と pip が使えるようにしてください。
 
 ## サンプルコードのダウンロード
 
