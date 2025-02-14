@@ -25,7 +25,7 @@ cd yyapis-python/quickstarts/speech-to-text/mic_stream_sample
 mkdir protos
 ```
 
-4. YYAPIs 開発者コンソールから音響分類 API の proto ファイル(`yysystem.proto`)をダウンロードして、 `protos` ディレクトリを配置します。
+4. YYAPIs 開発者コンソールから音声認識 API の proto ファイル(`yysystem.proto`)をダウンロードして、 `protos` ディレクトリを配置します。
 
 ```bash
 yyapis-python/quickstarts/speech-to-text/mic-stream-sample/protos/yysystem.proto # ← ここに配置する
